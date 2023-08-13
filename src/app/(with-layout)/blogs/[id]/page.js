@@ -4,10 +4,10 @@ export const metadata = {
 };
 
 const SingleBlog = ({ params }) => {
-  const [year, id] = params.segments || [];
+  // const [year, id] = params.segments || [];
   return (
     <div>
-      SingleBlog and {year || new Date().getFullYear()} for {id || 1}
+      SingleBlog {params.id}
     </div>
   );
 };
