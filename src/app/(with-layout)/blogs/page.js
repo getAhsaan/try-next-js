@@ -1,3 +1,4 @@
+import loadBlogsData from "@/utils/loadBlogsData";
 import Link from "next/link";
 
 // const blogs = [
@@ -22,12 +23,13 @@ import Link from "next/link";
 //     title: "title 4",
 //   },
 // ];
+export const metadata = {
+  title: "Blogs | Next Hero",
+  description: "Next Hero Homepage",
+};
 
 const BlogsPage = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    cache: "force-cache",
-  });
-  const blogs = await res.json();
+  const blogs = await loadBlogsData();
 
   return (
     <div className="container mx-auto">

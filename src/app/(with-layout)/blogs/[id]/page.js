@@ -1,13 +1,29 @@
-export const metadata = {
-  title: "Blogs | Next Hero",
-  description: "next hero desc",
+import loadBlogsData from "@/utils/loadBlogsData";
+import loadSingleBlogData from "@/utils/loadSingleBlogData";
+
+export const generateMetadata = async ({ params }) => {
+  const { title } = await loadSingleBlogData(params.id);
+  return {
+    title: title,
+  };
 };
 
-const SingleBlog = ({ params }) => {
+export const generateStaticParams = async () => {
+  const blogs = await loadBlogsData();
+  return blogs.map(({ id }) => ({
+    id: id.toString(),
+  }));
+};
+
+const SingleBlog = async ({ params }) => {
   // const [year, id] = params.segments || [];
+  const { id, title, body } = await loadSingleBlogData(params.id);
   return (
-    <div>
-      SingleBlog {params.id}
+    <div className="block border border-blue-500 p-2 m-2">
+      <h2 className="text-2xl">
+        {id}. {title}
+      </h2>
+      <p>{body}</p>
     </div>
   );
 };
