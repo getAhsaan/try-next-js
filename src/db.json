@@ -1,0 +1,111 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Electronics",
+            "imageUrl": "https://example.com/electronics.jpg"
+        },
+         {
+            "id": 2,
+            "name": "Clothing",
+            "imageUrl": "https://example.com/clothing.jpg"
+        },
+         {
+            "id": 3,
+            "name": "Books",
+            "imageUrl": "https://example.com/books.jpg"
+        },
+         {
+            "id": 4,
+            "name": "Home Decor",
+            "imageUrl": "https://example.com/home-decor.jpg"
+        },
+         {
+            "id": 5,
+            "name": "Sports",
+            "imageUrl": "https://example.com/sports.jpg"
+        },
+         {
+            "id": 6,
+            "name": "Beauty",
+            "imageUrl": "https://example.com/beauty.jpg"
+        }
+    ],
+    "products": [
+        {
+            "id": 1, 
+            "title": "iPhone 12",
+            "price": 999,
+            "categoryId": 1,
+            "features": [
+                "A14 Bionic chip",
+                "Super Retina XDR Display",
+                "Dual-camera System"
+            ],
+            "imageUrl": "https://example.com/iphone12.jpg"
+        },
+       
+        {
+            "id": 2, 
+            "title": "Samsung Galaxy S21",
+            "price": 899,
+            "categoryId": 1,
+            "features": [
+                "Exynos 2100 chip",
+                "Dynamic Amoled 2x Display",
+                "Tripple-camera System"
+            ],
+            "imageUrl": "https://example.com/iphone12.jpg"
+        },
+        {
+            "id": 3, 
+            "title": "Nokia 1200",
+            "price": 99,
+            "categoryId": 1,
+            "features": [
+                "no chip for 99 price",
+                "what dynamic for 99",
+                "no-camera System"
+            ],
+            "imageUrl": "https://example.com/nokia1200.jpg"
+        },
+         {
+            "id": 4, 
+            "title": "iPhone 12 new new new",
+            "price": 999,
+            "categoryId": 2,
+            "features": [
+                "A14 Bionic chip new new new",
+                "Super Retina XDR Display new new new",
+                "Dual-camera System new new new"
+            ],
+            "imageUrl": "https://example.com/iphone12new.jpg"
+        },
+       
+        {
+            "id":5, 
+            "title": "Samsung Galaxy S21 new new new",
+            "price": 899,
+            "categoryId": 2,
+            "features": [
+                "Exynos 2100 chip new new new",
+                "Dynamic Amoled 2x Display new new new",
+                "Tripple-camera System"
+            ],
+            "imageUrl": "https://example.com/iphone12new.jpg"
+        },
+        {
+            "id": 6, 
+            "title": "Nokia 1200 new new new",
+            "price": 99,
+            "categoryId": 2,
+            "features": [
+                "no chip for 99 price new new new",
+                "what dynamic for 99 new new new",
+                "no-camera System new new new"
+            ],
+            "imageUrl": "https://example.com/nokia1200new.jpg"
+        }
+       
+    ]
+}
