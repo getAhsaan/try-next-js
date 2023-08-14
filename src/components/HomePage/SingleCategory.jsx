@@ -4,9 +4,11 @@ import React from "react";
 const SingleCategory = ({ category }) => {
   const { id, name } = category;
   return (
-    <Link href={`/products?categoryId=${id}`}>
-      <h1>{name}</h1>
-    </Link>
+    <div className=" border p-2 border-blue-500 m-2 rounded">
+      <Link href={`/products?categoryId=${id}`}>
+        <h1>{name}</h1>
+      </Link>
+    </div>
   );
 };
 

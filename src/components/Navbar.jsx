@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="flex items-center justify-between container mx-auto ">
-        <h1 className="text-3xl font-semibold">Next Hero </h1>
+        <h1 className="md:text-3xl text-xl font-semibold">Next Hero </h1>
         <ul className="flex items-center justify-center">
           {navItems.map(({ path, title }) => (
             <li key={path} className="mx-2">

@@ -7,8 +7,8 @@ export const metadata = {
 
 const HomePage = () => {
   return (
-    <main>
-      <h1>Home Page</h1>
+    <main className="container mx-auto my-4">
+      {/* <h1>Home Page</h1> */}
       <Categories /> 
     </main>
   );
