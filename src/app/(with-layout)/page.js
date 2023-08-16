@@ -1,4 +1,6 @@
+import PopularProducts from "@/components/HomePage/PopularProducts";
 import Categories from "@/components/HomePage/categories";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Home | Next Hero",
@@ -12,6 +14,13 @@ const HomePage = () => {
     <main className="container mx-auto my-4">
       {/* <h1>Home Page</h1> */}
       <Categories />
+      <Suspense
+        fallback={
+          <h1 className="text-center font-semibold text-2xl">Please Wait...</h1>
+        }
+      >
+        <PopularProducts />
+      </Suspense>
     </main>
   );
 };
