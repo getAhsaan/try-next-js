@@ -1,8 +1,6 @@
 import getSingleProduct from "@/utils/getSingleProduct";
 
-
 const SingleProductPage = async ({ params }) => {
-
   const { id, title, price } = await getSingleProduct(params.id);
   return (
     <div>
