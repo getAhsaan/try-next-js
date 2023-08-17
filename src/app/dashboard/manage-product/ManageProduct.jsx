@@ -32,6 +32,7 @@ const ManageProduct = ({ products }) => {
       price,
     };
     if (title && price) {
+      setLoading(true)
       const res = await fetch(
         `http://localhost:5000/products/${updateData?.id}`,
         {
@@ -46,6 +47,7 @@ const ManageProduct = ({ products }) => {
       console.log(result);
       form.reset();
       closeModal();
+      setLoading(false)
       startTransition(() => {
         router.refresh();
       });
@@ -53,7 +55,7 @@ const ManageProduct = ({ products }) => {
   };
 
   const handleDelete = async (id) => {
-    alert("Are you sure?");
+    setLoading(true)
     const res = await fetch(`http://localhost:5000/products/${id}`, {
       method: "DELETE",
     });
@@ -62,6 +64,7 @@ const ManageProduct = ({ products }) => {
     startTransition(() => {
       router.refresh();
     });
+    setLoading(false)
   };
 
   return (

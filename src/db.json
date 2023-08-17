@@ -58,8 +58,8 @@
     },
     {
       "id": 3,
-      "title": "Nokia 1200",
-      "price": 99,
+      "title": "Nokia 12000",
+      "price": "999",
       "categoryId": 1,
       "features": [
         "no chip for 99 price",
@@ -120,18 +120,6 @@
       "id": 8,
       "title": "iPhone 17",
       "price": "1700",
-      "categoryId": 2,
-      "features": [
-        "A14 Bionic chip new new new",
-        "Super Retina XDR Display new new new",
-        "Dual-camera System new new new"
-      ],
-      "imageUrl": "https://example.com/iphone12new.jpg"
-    },
-    {
-      "id": 9,
-      "title": "iPhone 18",
-      "price": "1800",
       "categoryId": 2,
       "features": [
         "A14 Bionic chip new new new",
