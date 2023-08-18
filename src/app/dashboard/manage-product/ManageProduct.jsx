@@ -1,4 +1,5 @@
 "use client";
+
 import { useRef, useState, useTransition } from "react";
 import ManageSingleProduct from "./ManageSingleProduct";
 import Modal from "@/components/HomePage/Modal";
@@ -8,10 +9,12 @@ const ManageProduct = ({ products }) => {
   const modalRef = useRef(null);
   const [updateData, setUpdateDAta] = useState(null);
   const [isPending, startTransition] = useTransition();
-  const router = useRouter();
   const [loading, setLoading] = useState(false);
+  
   const isLoading = isPending || loading;
-
+  
+  const router = useRouter();
+  
   const openModal = (product) => {
     setUpdateDAta(product);
     modalRef.current.showModal();
@@ -32,7 +35,7 @@ const ManageProduct = ({ products }) => {
       price,
     };
     if (title && price) {
-      setLoading(true)
+      setLoading(true);
       const res = await fetch(
         `http://localhost:5000/products/${updateData?.id}`,
         {
@@ -47,7 +50,7 @@ const ManageProduct = ({ products }) => {
       console.log(result);
       form.reset();
       closeModal();
-      setLoading(false)
+      setLoading(false);
       startTransition(() => {
         router.refresh();
       });
@@ -55,7 +58,7 @@ const ManageProduct = ({ products }) => {
   };
 
   const handleDelete = async (id) => {
-    setLoading(true)
+    setLoading(true);
     const res = await fetch(`http://localhost:5000/products/${id}`, {
       method: "DELETE",
     });
@@ -64,7 +67,7 @@ const ManageProduct = ({ products }) => {
     startTransition(() => {
       router.refresh();
     });
-    setLoading(false)
+    setLoading(false);
   };
 
   return (
